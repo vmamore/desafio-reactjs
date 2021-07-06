@@ -41,7 +41,7 @@ export function GithubUserSearch() {
                                 return {
                                     url: repo.url,
                                     lastUpdate: repo.updated_at,
-                                    start: repo.stargazers_count,
+                                    stars: repo.stargazers_count,
                                     name: repo.name,
                                     description: repo.description
                                 } 
