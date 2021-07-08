@@ -1,13 +1,18 @@
 import { GithubUserSearch } from "../components/GithubUserSearch";
-import '../styles/home.scss';
+import Grid from '@material-ui/core/Grid';
 
 export function Home() {
     return (
-        <div id="home-page">
-            <main>
+        <Grid
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justify="center"
+        style={{ minHeight: '100vh' }}
+      >
             <h1>Search Devs</h1>    
             <GithubUserSearch />
-        </main>
-        </div>
+        </Grid>
     )
 }
