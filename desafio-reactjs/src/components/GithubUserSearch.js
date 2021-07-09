@@ -2,6 +2,7 @@ import { useState } from "react"
 
 import { useHistory } from 'react-router-dom';
 import { Button, TextField } from '@material-ui/core';
+
 import axios from 'axios';
 
 import SearchIcon from '@material-ui/icons/Search';
@@ -13,13 +14,16 @@ import '../styles/github-user-search.scss';
 
 export function GithubUserSearch() {
     const history = useHistory();
+
     const [username, setUsername] = useState('');
     const [isLoading, setLoading] = useState(false);
+
     const { setUser } = useUser();
+    
 
     const url = `https://api.github.com/users/${username}`;
 
-    async function fetchGithubProfileData(event) {
+    function fetchGithubProfileData(event) {
         event.preventDefault();
 
         if(username.trim() === '') {
@@ -68,28 +72,27 @@ export function GithubUserSearch() {
 
     return (
         <div id="user-search-page">
-        <form onSubmit={fetchGithubProfileData}>
-            <TextField
-                placeholder="Type the username here..."
-                variant="outlined"
-                type="text"
-                size="small"
-                value={username}
-                disabled={isLoading}
-                onChange={e => setUsername(e.target.value)}
-                >
-            </TextField>
-            { !isLoading ? 
-            (
-            <Button variant="contained" color="primary" type="submit">
-              <SearchIcon /> Buscar
-            </Button>)
-            : (
-            <Button variant="contained" color="primary" type="submit" disabled>
-              <CachedIcon />
-            </Button>)}
-            
-        </form>
+            <form onSubmit={fetchGithubProfileData}>
+                <TextField
+                    placeholder="Type the username here..."
+                    variant="outlined"
+                    type="text"
+                    size="small"
+                    value={username}
+                    disabled={isLoading}
+                    onChange={e => setUsername(e.target.value)}
+                    >
+                </TextField>
+                { !isLoading ? 
+                (
+                <Button variant="contained" color="primary" type="submit">
+                <SearchIcon /> Buscar
+                </Button>)
+                : (
+                <Button variant="contained" color="primary" type="submit" disabled>
+                <CachedIcon />
+                </Button>)}
+            </form>
         </div>
     )
 }
