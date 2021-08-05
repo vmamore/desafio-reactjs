@@ -1,3 +1,9 @@
+# Todo 📃
+- [ ] Utilizar UseEffect;
+- [ ] Passar como props entre home e profile (Utilizando react router dom);
+- [ ] Utilizar SASS ou apenas Material UI;
+- [ ] Criar service apartada para fazer chamadas ao github;
+
 # O desafio do Mozão
 *TL/DR:* Desafio em ReactJS para que as pessoas iniciantes de front-end possam desenvolver uma aplicação que vai testar seus conhecimentos e te proporcionar um feedback construtivo para crescer na stack.
 
