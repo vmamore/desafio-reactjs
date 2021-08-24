@@ -11,7 +11,7 @@ function App() {
       <UserContextProvider>
         <Route path="/" exact component={Home} />
         <Route path="/home" exact component={Home} />
-        <Route path="/profile" exact component={Profile} />
+        <Route path="/profile/:username" exact component={Profile} />
       </UserContextProvider>
     </BrowserRouter>
   );
