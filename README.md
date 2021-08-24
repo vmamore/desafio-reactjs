@@ -1,8 +1,8 @@
 # Todo 📃
-- [ ] Utilizar UseEffect;
-- [ ] Passar como props entre home e profile (Utilizando react router dom);
+- [x] Utilizar UseEffect;
+- [x] Passar como props entre home e profile (Utilizando react router dom);
+- [x] Criar service apartada para fazer chamadas ao github;
 - [ ] Utilizar SASS ou apenas Material UI;
-- [ ] Criar service apartada para fazer chamadas ao github;
 - [ ] Deploy
 
 # O desafio do Mozão
